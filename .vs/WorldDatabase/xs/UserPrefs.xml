@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{4B17911C-52A8-40FA-AD2C-13490AA967E1}|Default">
+  <MonoDevelop.Ide.ItemProperties.DapperAssignment PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DapperAssignment/StartUp.cs">
+    <Files>
+      <File FileName="DapperAssignment/Controllers/HomeController.cs" Line="34" Column="2" />
+      <File FileName="DapperAssignment/wwwroot/css/site.css" Line="2" Column="1" />
+      <File FileName="DapperAssignment/Views/Home/Index.cshtml" Line="2" Column="1" />
+      <File FileName="DapperAssignment/Models/City.cs" Line="4" Column="22" />
+      <File FileName="DapperAssignment/DataAccess/CityQuery.cs" Line="8" Column="1" />
+      <File FileName="DapperAssignment/Controllers/CityController.cs" Line="42" Column="14" />
+      <File FileName="DapperAssignment/Views/Shared/Program.cs" Line="4" Column="1" />
+      <File FileName="DapperAssignment/appsettings.json" Line="13" Column="1" />
+      <File FileName="DapperAssignment/StartUp.cs" Line="45" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WorldDatabase" expanded="True">
+            <Node name="DapperAssignment">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DataAccess" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+              <Node name="StartUp.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

@@ -1,0 +1,28 @@
+﻿
+@model List<City>
+@{
+    ViewData["Title"] = "Jhen Essholm";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Country Code
+        <td>Population</td>
+        <td>District</td>
+    </tr>
+    @foreach (City city in Model)
+    {
+        <tr>
+            <td>@city.Id</td>
+            <td>@city.Name</td>
+            <td>@city.CountryCode</td>
+            <td>@city.Population</td>
+            <td>@city.District</td>
+        </tr>
+    }
+</table>
