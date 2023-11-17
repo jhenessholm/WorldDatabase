@@ -1,28 +1,76 @@
 ﻿
 @model List<City>
 @{
-    ViewData["Title"] = "Jhen Essholm";
+    ViewData["Title"] = "Home Page";
+    string selectedContinent = ViewData["SelectedContinent"] as string;
+    string selectedOrderBy = ViewData["SelectedOrderBy"] as string;
 }
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<table>
-    <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Country Code
-        <td>Population</td>
-        <td>District</td>
-    </tr>
-    @foreach (City city in Model)
-    {
+    <h1 class="display-4">Cities with Life Expectancy</h1>
+    <form asp-controller="Home" asp-action="Index" method="get">
+        <label for="continent">Select Continent:</label>
+        <select name="continent" id="continent">
+            <option value="">All</option>
+            @foreach (var continent in ViewData["Continents"] as List<string>)
+            {
+                <option value="@continent" selected="@(continent ==
+selectedContinent)">
+                    @continent
+                </option>
+            }
+        </select>
+        <label for="orderBy">Order By:</label>
+        <select name="orderBy" id="orderBy">
+            <option value="LifeExpectancy" selected="@(selectedOrderBy ==
+"LifeExpectancy")">
+                Life Expectancy
+            </option>
+            <option value="CountryCode" selected="@(selectedOrderBy ==
+"CountryCode")">
+                Country Code
+            </option>
+        </select>
+        <input type="submit" value="Filter">
+    </form>
+    <table>
         <tr>
-            <td>@city.Id</td>
-            <td>@city.Name</td>
-            <td>@city.CountryCode</td>
-            <td>@city.Population</td>
-            <td>@city.District</td>
+            <td><b>Id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Country Code</b></td>
+            <td><b>Population</b></td>
+            <td><b>District</b></td>
+            <td><b>Life Expectancy</b></td>
         </tr>
-    }
-</table>
+        @foreach (City city in Model)
+        {
+            <tr>
+                <td>@city.Id</td>
+                <td>@city.Name</td>
+                <td>@city.CountryCode</td>
+                <td>@city.Population</td>
+                <td>@city.District</td>
+                <td>@city.LifeExpectancy</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
